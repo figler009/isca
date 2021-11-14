@@ -1,0 +1,16 @@
+version: 0.2
+
+env:
+  variables:
+    ENV_NAME: dev
+
+phases:
+  build:
+    commands:
+      - echo Entered the deploy phase...
+      - echo deploy started on `date`
+      - echo deploy to $ENV_NAME environment...
+      - ls
+      - ./scripts/pipeline/deploy-ui-bucket.sh
+      - aws s3 cp ./apps/isca-ui/dist/isca-ui/ s3://bucket-isca-ui/$ENV_NAME --recursive
+ 

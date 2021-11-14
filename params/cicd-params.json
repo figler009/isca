@@ -1,0 +1,6 @@
+{
+    "CodeBuildEnvironmentImage": "aws/codebuild/standard:4.0",
+    "GitHubBranch": "master",
+    "GitHubOwner": "luis-figueroa",
+    "GitHubRepository": "isca"
+}

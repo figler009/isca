@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - cd ./apps/isca-ui
+      - npm install
+      - npm install -g @angular/cli
+      - ng build
+
+artifacts:
+  files:
+    - '**/*'

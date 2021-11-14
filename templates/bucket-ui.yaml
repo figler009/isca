@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: CI/CD pipeline for github projects
+
+Resources:
+
+  CodePipelineArtifactStore:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "bucket-isca-ui"
+      VersioningConfiguration:
+        Status: Enabled
