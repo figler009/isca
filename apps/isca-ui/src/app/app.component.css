@@ -1,0 +1,32 @@
+html,
+body {
+    margin: 0;
+}
+
+.div_contenedor {
+    background: #e4dcdd;
+    height: 100vh;
+}
+
+.div_izquierdo {
+    background: white;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    height: 100vh;
+    left: 0px;
+}
+
+.div_derecho {
+    background: white;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    height: 100vh;
+    right: 0px;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+}
