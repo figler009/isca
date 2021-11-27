@@ -1,25 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SharedModule } from '../shared/shared.module'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+=======
+import { ControlComponent } from './control/control.component';
+
+
+>>>>>>> 9600bca70a638a26e5a5af37fdde863ed4815ffe
 
 @NgModule({
   declarations: [
     AppComponent,
-    CabeceraComponent
+    CabeceraComponent,
+    ControlComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     BrowserAnimationsModule,
     MatCardModule
+=======
+    SharedModule
+>>>>>>> 9600bca70a638a26e5a5af37fdde863ed4815ffe
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
 
