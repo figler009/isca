@@ -4,8 +4,9 @@ body {
 }
 
 .div_contenedor {
-    background: #e4dcdd;
-    height: 100vh;
+    background: #f5f5f5;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .div_izquierdo {
@@ -13,7 +14,7 @@ body {
     width: 200px;
     height: 200px;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     left: 0px;
 }
 
@@ -22,11 +23,15 @@ body {
     width: 200px;
     height: 200px;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     right: 0px;
 }
 
 .example-card {
-    max-width: 400px;
-    margin-bottom: 8px;
+    max-width: 200px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
 }
