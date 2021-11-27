@@ -1,0 +1,28 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateDeseases {
+  onCreateDeseases {
+    id
+    name
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateDeseases {
+  onUpdateDeseases {
+    id
+    name
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteDeseases {
+  onDeleteDeseases {
+    id
+    name
+    description
+    createdAt
+    updatedAt
+  }
+}

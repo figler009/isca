@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { ControlComponent } from './control/control.component';
+import { CrudTestComponent } from './crud-test/crud-test.component';
 
 
 
@@ -13,7 +14,8 @@ import { ControlComponent } from './control/control.component';
   declarations: [
     AppComponent,
     CabeceraComponent,
-    ControlComponent
+    ControlComponent,
+    CrudTestComponent
   ],
   imports: [
     BrowserModule,
