@@ -19,11 +19,13 @@ export type CreateDeseasesInput = {
   id?: string | null;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
 };
 
 export type ModelDeseasesConditionInput = {
   name?: ModelStringInput | null;
   description?: ModelStringInput | null;
+  arraypp?: ModelStringInput | null;
   and?: Array<ModelDeseasesConditionInput | null> | null;
   or?: Array<ModelDeseasesConditionInput | null> | null;
   not?: ModelDeseasesConditionInput | null;
@@ -73,6 +75,7 @@ export type Deseases = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -81,6 +84,7 @@ export type UpdateDeseasesInput = {
   id: string;
   name?: string | null;
   description?: string | null;
+  arraypp?: Array<string | null> | null;
 };
 
 export type DeleteDeseasesInput = {
@@ -91,6 +95,7 @@ export type ModelDeseasesFilterInput = {
   id?: ModelIDInput | null;
   name?: ModelStringInput | null;
   description?: ModelStringInput | null;
+  arraypp?: ModelStringInput | null;
   and?: Array<ModelDeseasesFilterInput | null> | null;
   or?: Array<ModelDeseasesFilterInput | null> | null;
   not?: ModelDeseasesFilterInput | null;
@@ -123,6 +128,7 @@ export type CreateDeseasesMutation = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -132,6 +138,7 @@ export type UpdateDeseasesMutation = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -141,6 +148,7 @@ export type DeleteDeseasesMutation = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -150,6 +158,7 @@ export type GetDeseasesQuery = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -161,6 +170,7 @@ export type ListDeseasesQuery = {
     id: string;
     name: string;
     description: string;
+    arraypp: Array<string | null>;
     createdAt: string;
     updatedAt: string;
   }>;
@@ -172,6 +182,7 @@ export type OnCreateDeseasesSubscription = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -181,6 +192,7 @@ export type OnUpdateDeseasesSubscription = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -190,6 +202,7 @@ export type OnDeleteDeseasesSubscription = {
   id: string;
   name: string;
   description: string;
+  arraypp: Array<string | null>;
   createdAt: string;
   updatedAt: string;
 };
@@ -208,6 +221,7 @@ export class APIService {
           id
           name
           description
+          arraypp
           createdAt
           updatedAt
         }
@@ -233,6 +247,7 @@ export class APIService {
           id
           name
           description
+          arraypp
           createdAt
           updatedAt
         }
@@ -258,6 +273,7 @@ export class APIService {
           id
           name
           description
+          arraypp
           createdAt
           updatedAt
         }
@@ -280,6 +296,7 @@ export class APIService {
           id
           name
           description
+          arraypp
           createdAt
           updatedAt
         }
@@ -305,6 +322,7 @@ export class APIService {
             id
             name
             description
+            arraypp
             createdAt
             updatedAt
           }
@@ -336,6 +354,7 @@ export class APIService {
           id
           name
           description
+          arraypp
           createdAt
           updatedAt
         }
@@ -355,6 +374,7 @@ export class APIService {
           id
           name
           description
+          arraypp
           createdAt
           updatedAt
         }
@@ -374,6 +394,7 @@ export class APIService {
           id
           name
           description
+          arraypp
           createdAt
           updatedAt
         }

@@ -4,6 +4,7 @@ query GetDeseases($id: ID!) {
     id
     name
     description
+    arraypp
     createdAt
     updatedAt
   }
@@ -18,6 +19,7 @@ query ListDeseases(
       id
       name
       description
+      arraypp
       createdAt
       updatedAt
     }

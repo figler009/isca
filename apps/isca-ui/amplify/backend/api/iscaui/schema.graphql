@@ -6,4 +6,5 @@ type Deseases @model{
     id: ID!
     name: String!
     description: String!
+    arraypp: [String]!
 }

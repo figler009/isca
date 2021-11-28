@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { ControlComponent } from './control/control.component';
 import { CrudTestComponent } from './crud-test/crud-test.component';
+import { MainComponent } from './main/main.component';
 
 
 
@@ -17,7 +18,8 @@ import { CrudTestComponent } from './crud-test/crud-test.component';
     AppComponent,
     CabeceraComponent,
     ControlComponent,
-    CrudTestComponent
+    CrudTestComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

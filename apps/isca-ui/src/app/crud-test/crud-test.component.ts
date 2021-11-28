@@ -24,7 +24,7 @@ export class CrudTestComponent implements OnInit {
     });
 
   }
-
+  
   async ngOnInit(){
     this.api.ListDeseases().then((event) => {
       this.deseases = event.items;
