@@ -5,14 +5,11 @@ import { SharedModule } from '../shared/shared.module'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
-<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-=======
 import { ControlComponent } from './control/control.component';
 
 
->>>>>>> 9600bca70a638a26e5a5af37fdde863ed4815ffe
 
 @NgModule({
   declarations: [
@@ -23,12 +20,9 @@ import { ControlComponent } from './control/control.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     BrowserAnimationsModule,
-    MatCardModule
-=======
+    MatCardModule,
     SharedModule
->>>>>>> 9600bca70a638a26e5a5af37fdde863ed4815ffe
   ],
   providers: [],
   bootstrap: [AppComponent],
