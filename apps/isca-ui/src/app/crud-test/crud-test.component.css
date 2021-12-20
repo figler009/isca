@@ -1,0 +1,14 @@
+.container-d{
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+
+}
+.deseases{
+    width: 400px;
+    margin-top: 10px;
+}
+.deseases div{
+    text-align: center;
+    border: 1px solid black;
+}

@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import {Router, NavigationStart, NavigationEnd,NavigationCancel, NavigationError, Event
+import {
+  Router, 
+  NavigationStart, 
+  NavigationEnd,
+  NavigationCancel, 
+  NavigationError, 
+  Event 
 } from '@angular/router';
 
 @Component({
@@ -7,6 +13,7 @@ import {Router, NavigationStart, NavigationEnd,NavigationCancel, NavigationError
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'ISCA';
 
@@ -27,3 +34,4 @@ export class AppComponent {
     });
   }
 }
+
