@@ -1,3 +1,64 @@
-html{
-    background-color: rgb(65, 155, 214);
+.icono-red{
+    color: #f10000 !important;
+      font-weight: bold !important;
+  }
+  
+  .icono-orange{
+    color: #ff8f26 !important;
+      font-weight: bold !important;
+  }
+  
+  .icono-green{
+    color: transparent !important;
+      /* font-weight: bold !important; */
+  }
+  
+  .icono-yellow{
+    color: transparent !important;
+      font-weight: bold !important;
+  }
+  
+  .tdr{
+    color: rgb(236, 236, 236);
+    font-weight: bold;
+    font-size: 120%;
+  }
+  
+  th{
+    font-weight: bold;
+    color: rgb(255, 255, 255) !important;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  table thead{
+    border-collapse: collapse;
+  }
+  
+  table, th, td, thead {
+    border-right: 0.2px solid rgba(161, 161, 161, 0.897);
+    border-bottom: 0.2px solid rgba(161, 161, 161, 0.897);;
+  }
+  
+  tbody tr:hover{
+    background-color: rgb(55, 55, 56);
+  }
+  
+  .pointer {
+      cursor: pointer;
+      /* width: 85px; */
+  }
+  
+  .pointer-s {
+      width: 60px;
+  }
+
+  .rdl{
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
 }

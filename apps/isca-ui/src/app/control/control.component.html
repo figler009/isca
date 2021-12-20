@@ -1,5 +1,5 @@
-
-<div class="content-heading bg-dark text-white">
+<div class="bg-dark text-white rdl">
+<div class="content-heading">
     <div class="container">
     <div class="row">
         <div class="col-xs-12">
@@ -21,7 +21,7 @@
       <a class="nav-link ">Disabled</a>
     </li>
 </ul> -->
-<div class="content-body bg-dark text-white">
+<div class="content-body">
     <div class="container col-xs-12 col-sm-12">
         <div class="tab-content color-panel">
             <div class="row">
@@ -29,12 +29,59 @@
                     <div class="form-group">
                         <div class="has-feedback">
                             <label class="control-label">Buscador</label>
-                            <input [(ngModel)]="buscar" type="text" placeholder="Buscar..." class="form-control">
-                            <span class="fa fa-search form-control-feedback text-muted"></span>
+                            <input #filtro [(ngModel)]="buscar" type="text" placeholder="Buscar..." 
+                            class="form-control bg-dark text-white">
+                            <span class="fas fa-search form-control-feedback text-muted"></span>
                         </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="form-group pull-right">
+                        <label class="control-label">Opciones</label><br>
+                        <button type="button" class="btn btn-labeled btn-info">
+                            <span class="btn-label btn-label-left">
+                                <fa-icon [icon]="faPlusCircle"></fa-icon>
+                            </span> Agregar Enfermedad
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-responsible">
+                        <table class="table text-white" id="enfermedades">
+                            <thead>
+                                <th class="pointer">Nombre</th>
+                                <th class="pointer">Fecha de modificación</th>
+                                <th class="pointer-s col-sm-3">Opciones</th>
+                            </thead>
+                            <tbody>
+                                <!-- | Filter: filtro.value: searhFields -->
+                                <tr *ngFor="let enf of enfermedades ">
+                                    <td>{{enf.enfermedad}}</td>
+                                    <td>{{enf.fecha}}</td>
+                                    <td class="col-sm-3">
+                                        <button class="btn btn-warning btn-sm col-xs-6">
+                                            <fa-icon [icon]="faPencilAlt"></fa-icon>
+                                            Editar
+                                        </button>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <button class="btn btn-danger btn-sm col-xs-6">
+                                            <fa-icon [icon]="faTimesCircle"></fa-icon>
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>       
     </div>
 </div>
+
+</div>
+
+
