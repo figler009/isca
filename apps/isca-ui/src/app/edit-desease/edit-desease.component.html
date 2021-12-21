@@ -1,15 +1,8 @@
-<amplify-authenticator>
-  <div>
-    Isca App
-    <amplify-sign-out></amplify-sign-out>
-  </div>
-  <!-- previous code -->
-</amplify-authenticator>
-<div class="form-body">
+<!-- <div class="form-body">
     <form
       autocomplete="off"
-      [formGroup]="createForm"
-      (ngSubmit)="onCreate(createForm.value)"
+      [formGroup]="updateForm"
+      (ngSubmit)="onUpdate()"
     >
       <div>
         <label>Name: </label>
@@ -77,43 +70,4 @@
       </div>
       <button type="submit">Submit</button>
     </form>
-</div>
-
-<div class="container-d">
-    <div class="deseases" *ngFor="let desease of deseases">
-      <div>
-        <button (click)="onDelete(desease)">Delete</button>
-        <a [routerLink]="['/','edit-desease', desease.id]">Update</a>
-      </div>
-      <div>{{ desease.name }}</div>
-      <div>{{ desease.anatomy }}</div>
-      <div>{{ desease.etiology }}</div>
-      <div>{{ desease.epidemiology }}</div>
-      <div>{{ desease.transmission }}</div>
-      <div>{{ desease.pathogeny }}</div>
-      <div>{{ desease.symptom }}</div>
-      <div>{{ desease.diagnosis }}</div>
-      <div>{{ desease.differential }}</div>
-      <div>{{ desease.treatment }}</div>
-      <div>{{ desease.control }}</div>
-      <div *ngFor="let biblio of desease.bibliography">
-          {{biblio}}
-      </div>
-      <div *ngFor="let cate of desease.categories">
-        {{cate}}
-      </div>
-      <div *ngFor="let cate of desease.categories">
-        {{cate}}
-      </div>
-      <amplify-s3-image 
-        [imgKey]="desease.thumbnail"
-      ></amplify-s3-image> 
-      <amplify-s3-image 
-        [imgKey]="desease.banner"
-      ></amplify-s3-image> 
-      <amplify-s3-image 
-        [imgKey]="desease.commonImage"
-      ></amplify-s3-image> 
-    </div>
-</div>
-
+</div> -->

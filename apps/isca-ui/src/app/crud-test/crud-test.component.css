@@ -12,3 +12,7 @@
     text-align: center;
     border: 1px solid black;
 }
+
+.hydrated img{
+    max-width: 400px;
+}

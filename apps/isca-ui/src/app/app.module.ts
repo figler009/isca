@@ -11,6 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ControlComponent } from './control/control.component';
 import { CrudTestComponent } from './crud-test/crud-test.component';
 import { MainComponent } from './main/main.component';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import { EditDeseaseComponent } from './edit-desease/edit-desease.component';
 
 
 
@@ -20,7 +22,8 @@ import { MainComponent } from './main/main.component';
     CabeceraComponent,
     ControlComponent,
     CrudTestComponent,
-    MainComponent
+    MainComponent,
+    EditDeseaseComponent
   ],
   imports: [
     
@@ -29,7 +32,8 @@ import { MainComponent } from './main/main.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatCardModule,
-    SharedModule
+    SharedModule,
+    AmplifyUIAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent],

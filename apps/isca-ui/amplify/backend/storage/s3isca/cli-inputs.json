@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3isca",
+  "policyUUID": "b1a553ce",
+  "bucketName": "iscabucket",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

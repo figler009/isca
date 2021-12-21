@@ -1,0 +1,73 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateDeseases($owner: String) {
+  onCreateDeseases(owner: $owner) {
+    id
+    name
+    anatomy
+    etiology
+    epidemiology
+    transmission
+    pathogeny
+    symptom
+    diagnosis
+    differential
+    treatment
+    control
+    bibliography
+    categories
+    thumbnail
+    banner
+    commonImage
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateDeseases($owner: String) {
+  onUpdateDeseases(owner: $owner) {
+    id
+    name
+    anatomy
+    etiology
+    epidemiology
+    transmission
+    pathogeny
+    symptom
+    diagnosis
+    differential
+    treatment
+    control
+    bibliography
+    categories
+    thumbnail
+    banner
+    commonImage
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteDeseases($owner: String) {
+  onDeleteDeseases(owner: $owner) {
+    id
+    name
+    anatomy
+    etiology
+    epidemiology
+    transmission
+    pathogeny
+    symptom
+    diagnosis
+    differential
+    treatment
+    control
+    bibliography
+    categories
+    thumbnail
+    banner
+    commonImage
+    createdAt
+    updatedAt
+    owner
+  }
+}
