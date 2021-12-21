@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { faPlusCircle, faSearch, faPencilAlt, faTimesCircle 
+import { Component, OnInit } from '@angular/core';
+import { faPlusCircle, faSearch, faPencilAlt, faTimesCircle, faTimes
 } from '@fortawesome/free-solid-svg-icons';
-import { FilterPipe } from 'src/shared/pipes/filter.pipe';
+
 
 // ./control.component.css'
 @Component({
@@ -15,19 +15,88 @@ export class ControlComponent implements OnInit {
   faSearch = faSearch;
   faPencilAlt = faPencilAlt;
   faTimesCircle = faTimesCircle;
-  //variables
-  buscar = '';
+  faTimes = faTimes;
 
+  //variables
+  error:boolean=false;
+  buscar = '';
+  enfermedad = ''
+  atributosb;
+  idactual:number=0;
   enfermedades = [
-    {enfermedad: 'Enfermedad 1', fecha: '2021/11/26'},
-    {enfermedad: 'Enfermedad 2', fecha: '2021/11/26'},
-    {enfermedad: 'Enfermedad 3', fecha: '2021/11/26'},
-    {enfermedad: 'Enfermedad 4', fecha: '2021/11/26'},
-    {enfermedad: 'Enfermedad 5', fecha: '2021/11/26'},
+    {id: 1,enfermedad: 'Enfermedad 1', fecha: '2021/11/26'},
+    {id: 2,enfermedad: 'Enfermedad 2', fecha: '2021/11/26'},
+    {id: 3,enfermedad: 'Enfermedad 3', fecha: '2021/11/26'},
+    {id: 4,enfermedad: 'Enfermedad 4', fecha: '2021/11/26'},
+    {id: 5,enfermedad: 'Enfermedad 5', fecha: '2021/11/26'}
   ]
   //modal
-  constructor() {  }
+  titulomodal= 'Agregar'
+  abrircerrar:boolean=false;
+  tipos:boolean=false;
+  constructor() { 
+    this.atributosb = ['id', 'enfermedad', 'fecha']
+   }
   ngOnInit(): void {
+
+  }
+  
+  abrir(vari:boolean){
+    this.abrircerrar=vari==true?this.abrircerrar=true:this.abrircerrar=false
+
+    if(this.abrircerrar==false){
+      this.enfermedad=''
+    }
   }
 
+  cambio(tipo:number,enf:string,id:number){
+    this.titulomodal=tipo==1?this.titulomodal='Agregar':this.titulomodal='Modificar '+enf
+    this.tipos=tipo==1?this.tipos=false:this.tipos=true
+    this.idactual=id
+  }
+
+  actualizar(){}
+
+  agregar(){
+    if(this.enfermedad.trim()==''){
+      this.errores(true)
+    }else{
+    let fechas ='hoy neta hoy'
+    let ultimo:any = this.enfermedades[this.enfermedades.length-1];
+    let idnueva = ultimo.id + 1
+    this.enfermedades.push({id: idnueva,enfermedad: this.enfermedad, fecha: ''+fechas})
+    this.limpiar()}
+  }
+
+  modificar(){
+    if(this.enfermedad.trim()==''){
+      this.errores(true)
+    }else{
+      let modificado:any=this.enfermedades.filter(e=>{
+        if(e.id == this.idactual){
+          e.enfermedad=this.enfermedad
+          e.fecha='hoy neta hoy'
+        }
+      }) 
+      this.limpiar()
+    }   
+  }
+
+  eliminar(id:any){
+    this.enfermedades=this.enfermedades.filter(e=>e.id != id)
+  }
+
+  limpiar(){
+    this.abrircerrar=false
+    this.enfermedad=''
+  }
+
+  errores(vari:boolean){
+    this.error=vari==true?this.error=true:this.error=false
+
+    if(this.error==true){
+      this.enfermedad=''
+      this.abrircerrar=false
+    }
+  }
 }

@@ -38,7 +38,8 @@
                 <div class="col-xs-12 col-sm-6">
                     <div class="form-group pull-right">
                         <label class="control-label">Opciones</label><br>
-                        <button type="button" class="btn btn-labeled btn-info">
+                        <button type="button" class="btn btn-labeled btn-info"
+                        (click)="abrir(true);cambio(1,'',0)">
                             <span class="btn-label btn-label-left">
                                 <fa-icon [icon]="faPlusCircle"></fa-icon>
                             </span> Agregar Enfermedad
@@ -58,16 +59,18 @@
                             </thead>
                             <tbody>
                                 <!-- | Filter: filtro.value: searhFields -->
-                                <tr *ngFor="let enf of enfermedades ">
+                                <tr *ngFor="let enf of enfermedades | Filter: filtro.value: atributosb">
                                     <td>{{enf.enfermedad}}</td>
                                     <td>{{enf.fecha}}</td>
                                     <td class="col-sm-3">
-                                        <button class="btn btn-warning btn-sm col-xs-6">
+                                        <button class="btn btn-warning btn-sm col-xs-6"
+                                        (click)="abrir(true);cambio(2,enf.enfermedad,enf.id)">
                                             <fa-icon [icon]="faPencilAlt"></fa-icon>
                                             Editar
                                         </button>
                                         &nbsp;&nbsp;&nbsp;
-                                        <button class="btn btn-danger btn-sm col-xs-6">
+                                        <button class="btn btn-danger btn-sm col-xs-6"
+                                        (click)="eliminar(enf.id)">
                                             <fa-icon [icon]="faTimesCircle"></fa-icon>
                                             Eliminar
                                         </button>
@@ -83,5 +86,47 @@
 </div>
 
 </div>
+
+<div *ngIf="abrircerrar" class="modal modal-sheet position-static d-block py-5 bg-dark text-white rdl" tabindex="-1" 
+role="dialog" id="modalSheet">
+<div class="modal-dialog bg-dark text-white" role="document">
+    <div class="modal-content rounded-6 shadow bg-dark text-white">
+        <div class="modal-header border-bottom-0">
+            <h2 class="modal-title">{{titulomodal}}</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="abrir(false)">
+            </button>
+          </div>
+          <div class="modal-body py-0">
+            <div class="form-group">
+                <div>
+                    <label class="control-label">Nombre de la enfermedad</label>
+                    <input [(ngModel)]="enfermedad" type="text" 
+                    class="form-control bg-dark text-white">
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer flex-column border-top-0">
+            <button type="button" *ngIf="!tipos" (click)="agregar()"
+            class="btn btn-lg btn-success w-100 mx-0 mb-2">Guardar</button>
+            <button type="button" *ngIf="tipos" (click)="modificar()"
+            class="btn btn-lg btn-success w-100 mx-0 mb-2">Modificar</button>
+            <button type="button" class="btn btn-lg btn-danger w-100 mx-0" data-bs-dismiss="modal" (click)="abrir(false)">Cancelar</button>
+          </div>
+      </div>
+  </div>
+  </div>
+
+<div *ngIf="error" class="modal modal-sheet position-static d-block py-5 bg-dark text-white rdl" tabindex="-1" 
+role="dialog" id="modalSheet">
+<div class="modal-dialog bg-dark text-white" role="document">
+    <div class="modal-content rounded-6 shadow bg-dark text-white">
+        <div class="modal-header border-bottom-0">
+            <h2 class="modal-title text-danger">Error <fa-icon [icon]="faTimes"></fa-icon></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="errores(false)">
+            </button>
+        </div>
+      </div>
+  </div>
+  </div>
 
 
