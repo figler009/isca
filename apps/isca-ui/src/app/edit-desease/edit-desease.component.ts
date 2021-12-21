@@ -9,7 +9,7 @@ import { APIService } from '../API.service';
 })
 export class EditDeseaseComponent implements OnInit {
 
-  public updateForm: FormGroup;
+  // public updateForm: FormGroup;
 
   public static selectedThumbnail: File;
   public static selectedBanner: File;
@@ -18,27 +18,27 @@ export class EditDeseaseComponent implements OnInit {
   constructor(private api: APIService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.updateForm = this.fb.group({
-      name: ["", Validators.required],
-      anatomy: ["", Validators.required],
-      etiology: ["", Validators.required],
-      epidemiology: ["", Validators.required],
-      transmission: ["", Validators.required],
-      pathogeny: ["", Validators.required],
-      symptom: ["", Validators.required],
-      diagnosis: ["", Validators.required],
-      differential: ["", Validators.required],
-      treatment: ["", Validators.required],
-      control: ["", Validators.required],
-      bibliography: ["", Validators.required],
-      categories: ["", Validators.required],
-      thumbnail: ["", Validators.required]
-    });
+    // this.updateForm = this.fb.group({
+    //   name: ["", Validators.required],
+    //   anatomy: ["", Validators.required],
+    //   etiology: ["", Validators.required],
+    //   epidemiology: ["", Validators.required],
+    //   transmission: ["", Validators.required],
+    //   pathogeny: ["", Validators.required],
+    //   symptom: ["", Validators.required],
+    //   diagnosis: ["", Validators.required],
+    //   differential: ["", Validators.required],
+    //   treatment: ["", Validators.required],
+    //   control: ["", Validators.required],
+    //   bibliography: ["", Validators.required],
+    //   categories: ["", Validators.required],
+    //   thumbnail: ["", Validators.required]
+    // });
   }
 
   onUpdate(){
 
-    this.updateForm.reset();
+    // this.updateForm.reset();
   }
 
   onThumbnailSelected(event: any){
