@@ -18,14 +18,40 @@ export type __SubscriptionContainer = {
 export type CreateDeseasesInput = {
   id?: string | null;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
 };
 
 export type ModelDeseasesConditionInput = {
   name?: ModelStringInput | null;
-  description?: ModelStringInput | null;
-  arraypp?: ModelStringInput | null;
+  anatomy?: ModelStringInput | null;
+  etiology?: ModelStringInput | null;
+  epidemiology?: ModelStringInput | null;
+  transmission?: ModelStringInput | null;
+  pathogeny?: ModelStringInput | null;
+  symptom?: ModelStringInput | null;
+  diagnosis?: ModelStringInput | null;
+  differential?: ModelStringInput | null;
+  treatment?: ModelStringInput | null;
+  control?: ModelStringInput | null;
+  bibliography?: ModelStringInput | null;
+  categories?: ModelStringInput | null;
+  thumbnail?: ModelStringInput | null;
+  banner?: ModelStringInput | null;
+  commonImage?: ModelStringInput | null;
   and?: Array<ModelDeseasesConditionInput | null> | null;
   or?: Array<ModelDeseasesConditionInput | null> | null;
   not?: ModelDeseasesConditionInput | null;
@@ -74,17 +100,44 @@ export type Deseases = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 export type UpdateDeseasesInput = {
   id: string;
   name?: string | null;
-  description?: string | null;
-  arraypp?: Array<string | null> | null;
+  anatomy?: string | null;
+  etiology?: string | null;
+  epidemiology?: string | null;
+  transmission?: string | null;
+  pathogeny?: string | null;
+  symptom?: string | null;
+  diagnosis?: string | null;
+  differential?: string | null;
+  treatment?: string | null;
+  control?: string | null;
+  bibliography?: Array<string | null> | null;
+  categories?: Array<string | null> | null;
+  thumbnail?: string | null;
+  banner?: string | null;
+  commonImage?: string | null;
 };
 
 export type DeleteDeseasesInput = {
@@ -94,8 +147,21 @@ export type DeleteDeseasesInput = {
 export type ModelDeseasesFilterInput = {
   id?: ModelIDInput | null;
   name?: ModelStringInput | null;
-  description?: ModelStringInput | null;
-  arraypp?: ModelStringInput | null;
+  anatomy?: ModelStringInput | null;
+  etiology?: ModelStringInput | null;
+  epidemiology?: ModelStringInput | null;
+  transmission?: ModelStringInput | null;
+  pathogeny?: ModelStringInput | null;
+  symptom?: ModelStringInput | null;
+  diagnosis?: ModelStringInput | null;
+  differential?: ModelStringInput | null;
+  treatment?: ModelStringInput | null;
+  control?: ModelStringInput | null;
+  bibliography?: ModelStringInput | null;
+  categories?: ModelStringInput | null;
+  thumbnail?: ModelStringInput | null;
+  banner?: ModelStringInput | null;
+  commonImage?: ModelStringInput | null;
   and?: Array<ModelDeseasesFilterInput | null> | null;
   or?: Array<ModelDeseasesFilterInput | null> | null;
   not?: ModelDeseasesFilterInput | null;
@@ -127,40 +193,96 @@ export type CreateDeseasesMutation = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 export type UpdateDeseasesMutation = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 export type DeleteDeseasesMutation = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 export type GetDeseasesQuery = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 export type ListDeseasesQuery = {
@@ -169,10 +291,24 @@ export type ListDeseasesQuery = {
     __typename: "Deseases";
     id: string;
     name: string;
-    description: string;
-    arraypp: Array<string | null>;
+    anatomy: string;
+    etiology: string;
+    epidemiology: string;
+    transmission: string;
+    pathogeny: string;
+    symptom: string;
+    diagnosis: string;
+    differential: string;
+    treatment: string;
+    control: string;
+    bibliography: Array<string | null>;
+    categories: Array<string | null>;
+    thumbnail: string;
+    banner: string;
+    commonImage: string;
     createdAt: string;
     updatedAt: string;
+    owner?: string | null;
   }>;
   nextToken?: string | null;
 };
@@ -181,30 +317,72 @@ export type OnCreateDeseasesSubscription = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 export type OnUpdateDeseasesSubscription = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 export type OnDeleteDeseasesSubscription = {
   __typename: "Deseases";
   id: string;
   name: string;
-  description: string;
-  arraypp: Array<string | null>;
+  anatomy: string;
+  etiology: string;
+  epidemiology: string;
+  transmission: string;
+  pathogeny: string;
+  symptom: string;
+  diagnosis: string;
+  differential: string;
+  treatment: string;
+  control: string;
+  bibliography: Array<string | null>;
+  categories: Array<string | null>;
+  thumbnail: string;
+  banner: string;
+  commonImage: string;
   createdAt: string;
   updatedAt: string;
+  owner?: string | null;
 };
 
 @Injectable({
@@ -220,10 +398,24 @@ export class APIService {
           __typename
           id
           name
-          description
-          arraypp
+          anatomy
+          etiology
+          epidemiology
+          transmission
+          pathogeny
+          symptom
+          diagnosis
+          differential
+          treatment
+          control
+          bibliography
+          categories
+          thumbnail
+          banner
+          commonImage
           createdAt
           updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -246,10 +438,24 @@ export class APIService {
           __typename
           id
           name
-          description
-          arraypp
+          anatomy
+          etiology
+          epidemiology
+          transmission
+          pathogeny
+          symptom
+          diagnosis
+          differential
+          treatment
+          control
+          bibliography
+          categories
+          thumbnail
+          banner
+          commonImage
           createdAt
           updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -272,10 +478,24 @@ export class APIService {
           __typename
           id
           name
-          description
-          arraypp
+          anatomy
+          etiology
+          epidemiology
+          transmission
+          pathogeny
+          symptom
+          diagnosis
+          differential
+          treatment
+          control
+          bibliography
+          categories
+          thumbnail
+          banner
+          commonImage
           createdAt
           updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -295,10 +515,24 @@ export class APIService {
           __typename
           id
           name
-          description
-          arraypp
+          anatomy
+          etiology
+          epidemiology
+          transmission
+          pathogeny
+          symptom
+          diagnosis
+          differential
+          treatment
+          control
+          bibliography
+          categories
+          thumbnail
+          banner
+          commonImage
           createdAt
           updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -321,10 +555,24 @@ export class APIService {
             __typename
             id
             name
-            description
-            arraypp
+            anatomy
+            etiology
+            epidemiology
+            transmission
+            pathogeny
+            symptom
+            diagnosis
+            differential
+            treatment
+            control
+            bibliography
+            categories
+            thumbnail
+            banner
+            commonImage
             createdAt
             updatedAt
+            owner
           }
           nextToken
         }
@@ -344,63 +592,126 @@ export class APIService {
     )) as any;
     return <ListDeseasesQuery>response.data.listDeseases;
   }
-  OnCreateDeseasesListener: Observable<
+  OnCreateDeseasesListener(
+    owner?: string
+  ): Observable<
     SubscriptionResponse<Pick<__SubscriptionContainer, "onCreateDeseases">>
-  > = API.graphql(
-    graphqlOperation(
-      `subscription OnCreateDeseases {
-        onCreateDeseases {
+  > {
+    const statement = `subscription OnCreateDeseases($owner: String) {
+        onCreateDeseases(owner: $owner) {
           __typename
           id
           name
-          description
-          arraypp
+          anatomy
+          etiology
+          epidemiology
+          transmission
+          pathogeny
+          symptom
+          diagnosis
+          differential
+          treatment
+          control
+          bibliography
+          categories
+          thumbnail
+          banner
+          commonImage
           createdAt
           updatedAt
+          owner
         }
-      }`
-    )
-  ) as Observable<
-    SubscriptionResponse<Pick<__SubscriptionContainer, "onCreateDeseases">>
-  >;
+      }`;
+    const gqlAPIServiceArguments: any = {};
+    if (owner) {
+      gqlAPIServiceArguments.owner = owner;
+    }
+    return API.graphql(
+      graphqlOperation(statement, gqlAPIServiceArguments)
+    ) as Observable<
+      SubscriptionResponse<Pick<__SubscriptionContainer, "onCreateDeseases">>
+    >;
+  }
 
-  OnUpdateDeseasesListener: Observable<
+  OnUpdateDeseasesListener(
+    owner?: string
+  ): Observable<
     SubscriptionResponse<Pick<__SubscriptionContainer, "onUpdateDeseases">>
-  > = API.graphql(
-    graphqlOperation(
-      `subscription OnUpdateDeseases {
-        onUpdateDeseases {
+  > {
+    const statement = `subscription OnUpdateDeseases($owner: String) {
+        onUpdateDeseases(owner: $owner) {
           __typename
           id
           name
-          description
-          arraypp
+          anatomy
+          etiology
+          epidemiology
+          transmission
+          pathogeny
+          symptom
+          diagnosis
+          differential
+          treatment
+          control
+          bibliography
+          categories
+          thumbnail
+          banner
+          commonImage
           createdAt
           updatedAt
+          owner
         }
-      }`
-    )
-  ) as Observable<
-    SubscriptionResponse<Pick<__SubscriptionContainer, "onUpdateDeseases">>
-  >;
+      }`;
+    const gqlAPIServiceArguments: any = {};
+    if (owner) {
+      gqlAPIServiceArguments.owner = owner;
+    }
+    return API.graphql(
+      graphqlOperation(statement, gqlAPIServiceArguments)
+    ) as Observable<
+      SubscriptionResponse<Pick<__SubscriptionContainer, "onUpdateDeseases">>
+    >;
+  }
 
-  OnDeleteDeseasesListener: Observable<
+  OnDeleteDeseasesListener(
+    owner?: string
+  ): Observable<
     SubscriptionResponse<Pick<__SubscriptionContainer, "onDeleteDeseases">>
-  > = API.graphql(
-    graphqlOperation(
-      `subscription OnDeleteDeseases {
-        onDeleteDeseases {
+  > {
+    const statement = `subscription OnDeleteDeseases($owner: String) {
+        onDeleteDeseases(owner: $owner) {
           __typename
           id
           name
-          description
-          arraypp
+          anatomy
+          etiology
+          epidemiology
+          transmission
+          pathogeny
+          symptom
+          diagnosis
+          differential
+          treatment
+          control
+          bibliography
+          categories
+          thumbnail
+          banner
+          commonImage
           createdAt
           updatedAt
+          owner
         }
-      }`
-    )
-  ) as Observable<
-    SubscriptionResponse<Pick<__SubscriptionContainer, "onDeleteDeseases">>
-  >;
+      }`;
+    const gqlAPIServiceArguments: any = {};
+    if (owner) {
+      gqlAPIServiceArguments.owner = owner;
+    }
+    return API.graphql(
+      graphqlOperation(statement, gqlAPIServiceArguments)
+    ) as Observable<
+      SubscriptionResponse<Pick<__SubscriptionContainer, "onDeleteDeseases">>
+    >;
+  }
 }

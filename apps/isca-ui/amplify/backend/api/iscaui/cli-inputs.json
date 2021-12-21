@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "iscaui",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/home/luis/Desktop/second-work/isca-d-18/isca/apps/isca-ui/amplify/backend/api/iscaui/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2022-12-18T20:05:30.728Z",
+      "keyDescription": ""
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authiscauib34d6acc"
+      }
+    ]
+  }
+}

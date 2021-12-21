@@ -1,10 +1,3 @@
-(window as any).global = window;
-(window as any).process = {
-  env: { DEBUG: undefined },
-};
-
-import 'core-js/es/typed-array';
-import 'core-js/es/object';
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -36,7 +29,10 @@ import 'core-js/es/object';
  * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
  */
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
-
+(window as any).global = window;
+(window as any).process = {
+  env: { DEBUG: undefined },
+};
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags
@@ -66,6 +62,9 @@ import 'core-js/es/object';
  */
 import 'zone.js';  // Included with Angular CLI.
 
+
+import 'core-js/es/typed-array';
+import 'core-js/es/object';
 
 /***************************************************************************************************
  * APPLICATION IMPORTS

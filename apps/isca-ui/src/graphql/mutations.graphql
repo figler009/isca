@@ -1,0 +1,82 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateDeseases(
+  $input: CreateDeseasesInput!
+  $condition: ModelDeseasesConditionInput
+) {
+  createDeseases(input: $input, condition: $condition) {
+    id
+    name
+    anatomy
+    etiology
+    epidemiology
+    transmission
+    pathogeny
+    symptom
+    diagnosis
+    differential
+    treatment
+    control
+    bibliography
+    categories
+    thumbnail
+    banner
+    commonImage
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation UpdateDeseases(
+  $input: UpdateDeseasesInput!
+  $condition: ModelDeseasesConditionInput
+) {
+  updateDeseases(input: $input, condition: $condition) {
+    id
+    name
+    anatomy
+    etiology
+    epidemiology
+    transmission
+    pathogeny
+    symptom
+    diagnosis
+    differential
+    treatment
+    control
+    bibliography
+    categories
+    thumbnail
+    banner
+    commonImage
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation DeleteDeseases(
+  $input: DeleteDeseasesInput!
+  $condition: ModelDeseasesConditionInput
+) {
+  deleteDeseases(input: $input, condition: $condition) {
+    id
+    name
+    anatomy
+    etiology
+    epidemiology
+    transmission
+    pathogeny
+    symptom
+    diagnosis
+    differential
+    treatment
+    control
+    bibliography
+    categories
+    thumbnail
+    banner
+    commonImage
+    createdAt
+    updatedAt
+    owner
+  }
+}
