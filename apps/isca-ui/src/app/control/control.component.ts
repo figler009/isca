@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 import { faPlusCircle, faSearch, faPencilAlt, faTimesCircle, faTimes
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,22 +24,30 @@ export class ControlComponent implements OnInit {
   enfermedad = ''
   atributosb;
   idactual:number=0;
-  enfermedades = [
-    {id: 1,enfermedad: 'Enfermedad 1', fecha: '2021/11/26'},
-    {id: 2,enfermedad: 'Enfermedad 2', fecha: '2021/11/26'},
-    {id: 3,enfermedad: 'Enfermedad 3', fecha: '2021/11/26'},
-    {id: 4,enfermedad: 'Enfermedad 4', fecha: '2021/11/26'},
-    {id: 5,enfermedad: 'Enfermedad 5', fecha: '2021/11/26'}
-  ]
+  enfermedades = []
+  // enfermedades = [
+  //   {id: 1,enfermedad: 'Enfermedad 1', fecha: '2021/11/26'},
+  //   {id: 2,enfermedad: 'Enfermedad 2', fecha: '2021/11/26'},
+  //   {id: 3,enfermedad: 'Enfermedad 3', fecha: '2021/11/26'},
+  //   {id: 4,enfermedad: 'Enfermedad 4', fecha: '2021/11/26'},
+  //   {id: 5,enfermedad: 'Enfermedad 5', fecha: '2021/11/26'}
+  // ]
   //modal
   titulomodal= 'Agregar'
   abrircerrar:boolean=false;
   tipos:boolean=false;
-  constructor() { 
+  constructor(private http: HttpClient) { 
     this.atributosb = ['id', 'enfermedad', 'fecha']
    }
   ngOnInit(): void {
+    this.cargar()
+  }
 
+  cargar(){
+    this.http.get('http://localhost:3200/api/enfermedades').toPromise()
+    .then((respuesta:any)=>{
+      this.enfermedades = respuesta
+    })
   }
   
   abrir(vari:boolean){
@@ -64,7 +73,7 @@ export class ControlComponent implements OnInit {
     let fechas ='hoy neta hoy'
     let ultimo:any = this.enfermedades[this.enfermedades.length-1];
     let idnueva = ultimo.id + 1
-    this.enfermedades.push({id: idnueva,enfermedad: this.enfermedad, fecha: ''+fechas})
+    //this.enfermedades.push({id: idnueva,enfermedad: this.enfermedad, fecha: ''+fechas})
     this.limpiar()}
   }
 
@@ -72,18 +81,18 @@ export class ControlComponent implements OnInit {
     if(this.enfermedad.trim()==''){
       this.errores(true)
     }else{
-      let modificado:any=this.enfermedades.filter(e=>{
-        if(e.id == this.idactual){
-          e.enfermedad=this.enfermedad
-          e.fecha='hoy neta hoy'
-        }
-      }) 
+      // let modificado:any=this.enfermedades.filter(e=>{
+      //   if(e.id == this.idactual){
+      //     e.enfermedad=this.enfermedad
+      //     e.fecha='hoy neta hoy'
+      //   }
+      // }) 
       this.limpiar()
     }   
   }
 
   eliminar(id:any){
-    this.enfermedades=this.enfermedades.filter(e=>e.id != id)
+    // this.enfermedades=this.enfermedades.filter(e=>e.id != id)
   }
 
   limpiar(){

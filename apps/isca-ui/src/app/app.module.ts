@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from '../shared/shared.module'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,10 +10,9 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { ControlComponent } from './control/control.component';
-import { CrudTestComponent } from './crud-test/crud-test.component';
+// import { CrudTestComponent } from './crud-test/crud-test.component';
 import { MainComponent } from './main/main.component';
-import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
-import { EditDeseaseComponent } from './edit-desease/edit-desease.component';
+
 
 
 
@@ -21,19 +21,16 @@ import { EditDeseaseComponent } from './edit-desease/edit-desease.component';
     AppComponent,
     CabeceraComponent,
     ControlComponent,
-    CrudTestComponent,
-    MainComponent,
-    EditDeseaseComponent
+    MainComponent
   ],
   imports: [
-    
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatCardModule,
-    SharedModule,
-    AmplifyUIAngularModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

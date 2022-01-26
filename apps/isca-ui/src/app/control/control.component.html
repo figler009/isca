@@ -60,17 +60,17 @@
                             <tbody>
                                 <!-- | Filter: filtro.value: searhFields -->
                                 <tr *ngFor="let enf of enfermedades | Filter: filtro.value: atributosb">
-                                    <td>{{enf.enfermedad}}</td>
-                                    <td>{{enf.fecha}}</td>
+                                    <td>{{enf.nombre}}</td>
+                                    <td>{{enf.fecha_ingreso | date:"dd/MM/yyyy hh:mm a"}}</td>
                                     <td class="col-sm-3">
                                         <button class="btn btn-warning btn-sm col-xs-6"
-                                        (click)="abrir(true);cambio(2,enf.enfermedad,enf.id)">
+                                        (click)="abrir(true);cambio(2,enf.nombre,enf.id_enfermdad)">
                                             <fa-icon [icon]="faPencilAlt"></fa-icon>
                                             Editar
                                         </button>
                                         &nbsp;&nbsp;&nbsp;
                                         <button class="btn btn-danger btn-sm col-xs-6"
-                                        (click)="eliminar(enf.id)">
+                                        (click)="eliminar(enf.id_enfermdad)">
                                             <fa-icon [icon]="faTimesCircle"></fa-icon>
                                             Eliminar
                                         </button>
@@ -87,7 +87,7 @@
 
 </div>
 
-<div *ngIf="abrircerrar" class="modal modal-sheet position-static d-block py-5 bg-dark text-white rdl" tabindex="-1" 
+<!-- <div *ngIf="abrircerrar" class="modal modal-sheet position-static d-block py-5 bg-dark text-white rdl" tabindex="-1" 
 role="dialog" id="modalSheet">
 <div class="modal-dialog bg-dark text-white" role="document">
     <div class="modal-content rounded-6 shadow bg-dark text-white">
@@ -127,6 +127,6 @@ role="dialog" id="modalSheet">
         </div>
       </div>
   </div>
-  </div>
+  </div> -->
 
 
