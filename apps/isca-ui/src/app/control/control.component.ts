@@ -25,26 +25,29 @@ export class ControlComponent implements OnInit {
   atributosb;
   idactual:number=0;
   enfermedades = []
-  // enfermedades = [
-  //   {id: 1,enfermedad: 'Enfermedad 1', fecha: '2021/11/26'},
-  //   {id: 2,enfermedad: 'Enfermedad 2', fecha: '2021/11/26'},
-  //   {id: 3,enfermedad: 'Enfermedad 3', fecha: '2021/11/26'},
-  //   {id: 4,enfermedad: 'Enfermedad 4', fecha: '2021/11/26'},
-  //   {id: 5,enfermedad: 'Enfermedad 5', fecha: '2021/11/26'}
-  // ]
   //modal
   titulomodal= 'Agregar'
   abrircerrar:boolean=false;
   tipos:boolean=false;
   constructor(private http: HttpClient) { 
-    this.atributosb = ['id', 'enfermedad', 'fecha']
+    this.atributosb = ['id_enfermedad', 'nombre', 'fecha_ingreso']
    }
   ngOnInit(): void {
-    this.cargar()
+    this.cargar2()
   }
 
   cargar(){
     this.http.get('http://localhost:3200/api/enfermedades').toPromise()
+    .then((respuesta:any)=>{
+      this.enfermedades = respuesta
+    })
+  }
+
+  cargar2(){
+    let datos = {
+      fecha: '2022/01/27'
+    }
+    this.http.post('http://localhost:3200/api/enfermedades2',datos).toPromise()
     .then((respuesta:any)=>{
       this.enfermedades = respuesta
     })

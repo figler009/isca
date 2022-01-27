@@ -23,6 +23,17 @@ router.route('/enfermedades').get((request,response)=>{
     })
 })
 
+router.route('/enfermedades2').post((requests,response)=>{
+    console.log(requests.body)
+    let fechas = requests.body
+    enfermedades.nombre2(fechas).then(respuesta=>{
+        return response.json(respuesta[0])
+    }, (erro)=>{
+        console.log(erro.message)
+        return response.json(erro.message)
+    })
+})
+
 var puerto = process.env.PORT || 3200;
 app.listen(puerto)
 console.log('api iniciada en el puerto ',puerto)
